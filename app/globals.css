@@ -98,7 +98,7 @@
   }
 
   .pink_container {
-    @apply flex flex-col justify-center items-center bg-primary px-6 py-10 w-full min-h-[530px] pattern;
+    @apply flex flex-col justify-center items-center bg-pink-600 px-6 py-10 w-full min-h-[530px] pattern;
   }
 
   .tag {
@@ -269,8 +269,6 @@
 .w-md-editor-toolbar {
   padding: 10px;
 }
-
-
 
 @layer base {
   * {
