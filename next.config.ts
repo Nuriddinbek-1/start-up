@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  devIndicators: {
+    position: "bottom-right", // ✅ Clean & valid
+  },
 };
 
 export default nextConfig;
