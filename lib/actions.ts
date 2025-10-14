@@ -3,7 +3,6 @@
 import { parseServerActionResponse } from "./utils";
 import { auth } from "@/auth";
 import { writeClient } from "@/sanity/lib/write-client";
-import { resume } from "react-dom/server";
 import slugify from "slugify";
 
 export const createPitch = async (
@@ -41,13 +40,13 @@ export const createPitch = async (
       pitch,
     };
 
-    const result = await writeClient.create(document: {_type: "startup", ...startup})
+    const result = await writeClient.create({ _type: "startup", ...startup });
 
-    return parseServerActionResponse(response: {
+    return parseServerActionResponse({
       ...result,
       error: "",
-      status: "SUCCESS"
-  })
+      status: "SUCCESS",
+    });
   } catch (error) {
     return parseServerActionResponse({
       error: JSON.stringify(error),
